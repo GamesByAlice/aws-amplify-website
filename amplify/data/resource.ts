@@ -6,11 +6,31 @@ adding a new "isDone" field as a boolean. The authorization rule below
 specifies that any user authenticated via an API key can "create", "read",
 "update", and "delete" any "Todo" records.
 =========================================================================*/
+
+/**
+ * Database schema definition for the application
+ * Includes Todo and Comment models with appropriate authorization rules
+ */
 const schema = a.schema({
+  /** Todo model for basic task management */
   Todo: a
     .model({
-      content: a.string(),  
-	}).authorization(allow => [allow.owner()]),
+      content: a.string(),
+    })
+    .authorization(allow => [allow.owner()]),
+  
+  /** Comment model for article discussions */
+  Comment: a
+    .model({
+      articleId: a.string().required(),
+      content: a.string().required(),
+      authorName: a.string().required(),
+      createdAt: a.datetime(),
+    })
+    .authorization(allow => [
+      allow.authenticated().to(['create', 'read']),
+      allow.owner().to(['update', 'delete'])
+    ]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

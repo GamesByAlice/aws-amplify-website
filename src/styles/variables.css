@@ -1,0 +1,22 @@
+/* Theme colors and CSS variables */
+:root {
+  --primary-color: #646cff;
+  --secondary-color: #61dafb;
+  --dark-bg: #1a1a1a;
+  --dark-bg-secondary: #2d3748;
+  --dark-bg-tertiary: #4a5568;
+  --light-bg: #f8f9fa;
+  --light-bg-secondary: #ffffff;
+  --dark-text: #ffffff;
+  --light-text: #333333;
+  --muted-text-dark: #a0aec0;
+  --muted-text-light: #6d6c6c;
+  --muted-text-gray: #727171ff;
+  --border-dark: #4a5568;
+  --border-light: #e2e8f0;
+  --comment-content-light: #555;
+  --comment-content-dark: #e2e8f0;
+  --active-bg-light: #f0f0f0;
+  --active-bg-dark: var(--dark-bg-tertiary);
+  --subsection-active-light: #e2e8f0;
+}

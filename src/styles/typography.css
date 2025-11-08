@@ -1,0 +1,30 @@
+/* Typography and text styles */
+.text-muted {
+  font-style: italic;
+}
+
+.text-muted {
+  color: var(--muted-text-light);
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--muted-text-dark);
+}
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+.text-small-medium {
+  font-size: 0.9rem;
+}
+
+.text-gray {
+  color: var(--muted-text-gray);
+}
+
+.coming-soon {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted-text-gray);
+}

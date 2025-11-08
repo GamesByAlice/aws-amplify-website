@@ -1,0 +1,43 @@
+.learn-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.learn-nav {
+  width: 250px;
+  flex-shrink: 0;
+  padding-left: 2rem;
+}
+
+.learn-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.learn-nav-item {
+  margin-bottom: 1rem;
+}
+
+.learn-subsection-list {
+  list-style: none;
+  padding: 0.5rem 0 0 1rem;
+  margin: 0;
+}
+
+.learn-subsection-item {
+  margin-bottom: 0.25rem;
+}
+
+.learn-main {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.tutorial-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--muted-text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}

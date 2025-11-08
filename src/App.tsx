@@ -5,9 +5,11 @@ import TabContent from "./components/TabContent";
 import Footer from "./components/Footer";
 import { tabConfigs } from "./data/tabConfig";
 import "./App.css";
+import "./styles/shared.css";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState("about-me-tab");
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
@@ -17,18 +19,24 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
+
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
     window.location.hash = tab;
   };
 
   return (
-    <>
-      <Header title="Placeholder Title" tagline="Placeholder tag line." />
-      <TabNavigation activeTab={activeTab} onTabClick={handleTabClick} />
-      <TabContent activeTab={activeTab} />
-      <Footer name="Ryan Dugie" year={2025} />
-    </>
+    <div className="app-container">
+      <Header title="Alice Dugie" tagline="Full-stack Software Engineer" isCollapsed={activeTab === 'learn-tab'} />
+      <TabNavigation activeTab={activeTab} onTabClick={handleTabClick} isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
+      <div className="flex-1">
+        <TabContent activeTab={activeTab} />
+      </div>
+      <Footer name="Alice Dugie" year={2025} />
+    </div>
   );
 }
 

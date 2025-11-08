@@ -1,3 +1,6 @@
+import '../styles/shared.css';
+import './TabSection.css';
+
 interface TabSectionProps {
   title: string;
   children: React.ReactNode;
@@ -6,7 +9,7 @@ interface TabSectionProps {
 function TabSection({ title, children }: TabSectionProps) {
   return (
     <section className="tab-content">
-      <h2>{title}</h2>
+      <h2 className="tab-section-title title">{title}</h2>
       {children}
     </section>
   );

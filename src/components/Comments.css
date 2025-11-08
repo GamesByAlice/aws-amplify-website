@@ -1,0 +1,28 @@
+.comments-container {
+  margin-top: 3rem;
+  border-top: 1px solid;
+  padding-top: 2rem;
+}
+
+.comments-container {
+  border-color: var(--border-light);
+}
+
+[data-theme="dark"] .comments-container {
+  border-color: var(--border-dark);
+}
+
+.comments-title {
+  margin-bottom: 1.5rem;
+}
+
+.comment-form {
+  margin-bottom: 2rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}

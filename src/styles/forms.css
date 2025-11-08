@@ -1,0 +1,21 @@
+/* Form elements */
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.textarea {
+  border-color: var(--border-light);
+  background-color: var(--light-bg-secondary);
+  color: var(--light-text);
+}
+
+[data-theme="dark"] .textarea {
+  border-color: var(--border-dark);
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text);
+}

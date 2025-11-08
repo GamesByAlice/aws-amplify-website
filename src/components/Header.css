@@ -1,0 +1,22 @@
+.header {
+  padding: 4rem 0;
+  max-height: 300px;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.header.collapsed {
+  padding: 0;
+  max-height: 0;
+}
+
+.header-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-content.collapsed {
+  opacity: 0;
+  transform: translateY(-20px);
+}

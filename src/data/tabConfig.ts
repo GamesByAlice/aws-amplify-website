@@ -7,25 +7,25 @@ export interface TabConfig {
 
 export const tabConfigs: TabConfig[] = [
   {
-    id: "about",
+    id: "about-me-tab",
     label: "About Me",
     title: "About Me",
     content: "Placeholder about me information."
   },
   {
-    id: "portfolio",
-    label: "Portfolio", 
+    id: "projects-tab",
+    label: "Projects",
     title: "Portfolio",
     content: "Placeholder list of professional and personal projects."
   },
   {
-    id: "blog",
-    label: "Blog",
-    title: "Blog", 
+    id: "learn-tab",
+    label: "Learn",
+    title: "Tutorials",
     content: "Placeholder list of articles."
   },
   {
-    id: "contact",
+    id: "contact-tab",
     label: "Contact",
     title: "Contact",
     content: "Placeholder contact information."
